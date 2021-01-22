@@ -17,7 +17,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <cassandra-java-driver.version>4.9.0</cassandra-java-driver.version>
         <cassandra-native-protocol.version>1.4.11</cassandra-native-protocol.version>
         <springdoc.version>1.3.9</springdoc.version>
