@@ -1,21 +1,18 @@
 package org.code;
 
-import java.io.File;
-
-import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import org.code.todo.TodoListRepository;
 import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.config.DriverConfigLoader;
 import com.datastax.oss.driver.api.core.cql.SimpleStatement;
 import com.datastax.oss.driver.api.core.type.DataTypes;
 import com.datastax.oss.driver.api.querybuilder.SchemaBuilder;
+import org.code.todo.TodoListRepository;
+import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@RunWith(JUnitPlatform.class)
+import java.io.File;
+
+// @RunWith(JUnitPlatform.class)
 public class CreateSchemaInAstraTest {
 
     /** Logger for the class. */

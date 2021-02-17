@@ -1,30 +1,26 @@
 package org.code;
 
-import java.io.File;
-import java.util.UUID;
-
-import javax.annotation.PreDestroy;
-
+import com.datastax.oss.driver.api.core.CqlSession;
+import com.datastax.oss.driver.api.core.config.DriverConfigLoader;
+import com.datastax.oss.driver.api.core.cql.SimpleStatement;
+import org.code.todo.TodoListRepository;
+import org.code.todo.TodoListRepositoryCassandraDriverImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import org.code.todo.TodoListRepository;
-import org.code.todo.TodoListRepositoryCassandraDriverImpl;
-import com.datastax.oss.driver.api.core.CqlSession;
-import com.datastax.oss.driver.api.core.config.DriverConfigLoader;
-import com.datastax.oss.driver.api.core.cql.SimpleStatement;
+import javax.annotation.PreDestroy;
+import java.io.File;
+import java.util.UUID;
 
 /**
  * Junit5 + Spring.
  * @author Cedrick LUNVEN (@clunven)
  */
-@RunWith(JUnitPlatform.class)
+// @RunWith(JUnitPlatform.class)
 @SpringJUnitConfig
 public class CRUDWithAstraTest {
 
